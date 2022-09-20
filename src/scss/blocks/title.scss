@@ -1,0 +1,20 @@
+h1 {
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 1.25;
+
+  @media ($tablet3) {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 5.2rem;
+  line-height: 1.25;
+  @media ($tablet) {
+    font-size: 4rem;
+  }
+  @media ($tablet3) {
+    font-size: 3rem;
+  }
+}

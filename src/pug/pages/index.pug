@@ -1,0 +1,129 @@
+extends ../layout/default
+
+block content
+    section.news
+        .container
+            .news__content
+                h1.news__title Все новости
+                .news__breadcrumbs.breadcrumbs
+                    .breadcrumbs_wr
+                        a.breadcrumb.this--link(href='/') Главная#[span /]
+                        .breadcrumb Новости
+                form.news__form(name="news_form" action="#")
+                    .news__form_item
+                        input(type="text" id="date_input" name="date")
+                        div.datepicker(id="datepicker")
+                            .datepicker__value 02/02/2021
+                            span.datepicker__arrow
+                    .news__form_item
+                        select.select(name='select')
+                            option(value='') Выбрать рубрику
+                            option(value='Медицина' disabled) Медицина
+                            option(value='Общество') Общество
+                            option(value='Коммуналка') Коммуналка
+                            option(value='Политика') Политика
+                            option(value='Спорт') Спорт
+                            option(value='Вектор развития') Вектор развития
+                            option(value='Общество') Общество
+                            option(value='Коммуналка') Коммуналка
+                            option(value='Политика') Политика
+                .news__items
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/1.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Медицина
+                                    .tag Общество
+                                .tags_group
+                                    .tag.this--date 02/02/2021
+                            .news_item__title Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/2.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Медицина
+                                .tags_group
+                                    .tag.this--date 02/02/2021
+                            .news_item__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/3.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Коммуналка
+                                .tags_group
+                                    .tag.this--date 29/01/2021
+                            .news_item__title Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/4.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Политика
+                                .tags_group
+                                    .tag.this--date 29/01/2021
+                            .news_item__title В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/5.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Коммуналка
+                                .tags_group
+                                    .tag.this--date 29/01/2021
+                            .news_item__title В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку
+                    a.news__item.news_item(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/6.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Общество
+                                .tags_group
+                                    .tag.this--date 29/01/2021
+                            .news_item__title ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год
+                    a.news__item.news_item.this--big(href="#")
+                        .news_item__top
+                            .news_item__img
+                                img(src="./img/news/2.jpg" alt="")
+                        .news_item__bottom
+                            .news_item__tags.tags
+                                .tags_group
+                                    .tag Медицина
+                                .tags_group
+                                    .tag.this--date 29/01/2021
+                            .news_item__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
+                            .news_item__text Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...
+                ul.news__pagination.pagination
+                    li.pagination__item
+                        a.pagination__arrow.pagination__prev.this--disabled(href='#')
+                    li.pagination__item
+                        a.pagination__link.active(href='#') 1
+                    li.pagination__item
+                        a.pagination__link(href='#') 2
+                    li.pagination__item
+                        a.pagination__link(href='#') 3
+                    li.pagination__item
+                        a.pagination__link(href='#') 4
+                    li.pagination__item
+                        | ...
+                    li.pagination__item
+                        a.pagination__link(href='#') 123
+                    li.pagination__item
+                        a.pagination__arrow.pagination__next(href='#')
+block scripts
+    script(src='../../js/datepicker.min.js')
+    script(src='../../js/choices.min.js')

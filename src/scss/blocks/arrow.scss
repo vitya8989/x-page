@@ -1,0 +1,30 @@
+.arrow {
+  position: relative;
+  width: 8px;
+  height: 4px;
+  flex: 0 0 auto;
+  transition: 0.3s;
+  margin-top: 2px;
+  @media ($mobileMiddle) {
+    margin-top: 1px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 5.5px;
+    background: #373334;
+    top: 1px;
+    transition: 0.3s;
+  }
+  &::before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+  &::after {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+}

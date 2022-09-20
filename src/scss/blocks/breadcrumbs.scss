@@ -1,0 +1,42 @@
+.breadcrumbs {
+  margin-top: 5px;
+  overflow-x: auto;
+  max-width: 100%;
+
+  @media ($tablet) {
+    max-width: 100%;
+    top: 10px;
+  }
+}
+.breadcrumbs_wr {
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+}
+.breadcrumb {
+  margin-left: 5px;
+  color: #959595;
+  font-weight: 400;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  padding-right: 5px;
+
+  &.this--link {
+    color: #959595;
+    padding-right: 0;
+    transition: 0.3s;
+
+    &:hover {
+      @media ($tabletMax) {
+        color: #9F0023;
+        span {
+          color: #959595;
+        }
+      }
+    }
+  }
+
+  span {
+    margin-left: 5px;
+  }
+}

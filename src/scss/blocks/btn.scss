@@ -1,0 +1,39 @@
+.btn {
+  background: #E5E5E5;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+  border: 2px solid #9F0023;
+  border-radius: 56px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #9F0023;
+  padding: 0 26px;
+  text-align: center;
+
+  @media ($tablet3) {
+    font-size: 1.4rem;
+    padding: 0 15px;
+  }
+
+  &:hover {
+    @media ($tabletMax) {
+      color: #ffffff;
+      background: #9F0023;
+    }
+  }
+  &:active {
+    background: #910121!important;
+    border-color: #910121!important;
+  }
+
+  &.this--wh {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,119 @@
+.detail_form {
+  padding: 90px 0 108px;
+  background: #373334;
+
+  @media ($tablet) {
+    padding: 60px 0;
+  }
+}
+.detail_form__title {
+  color: #ffffff;
+}
+.detail_form__form {
+  margin-top: 54px;
+  @media ($tablet) {
+    margin-top: 30px;
+  }
+}
+.detail_form__items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -50px;
+  margin-bottom: -50px;
+  @media ($tablet) {
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  @media ($mobileMiddle) {
+    margin-left: 0;
+  }
+}
+.detail_form__item {
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: calc(37.6% - 50px);
+
+  @media ($tablet) {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: calc(37.6% - 30px);
+  }
+  @media ($tablet3) {
+    width: calc(50% - 30px);
+  }
+  @media ($mobileMiddle) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  &.this--100 {
+    width: calc(100% - 50px);
+    @media ($tablet) {
+      width: calc(100% - 30px);
+    }
+    @media ($mobileMiddle) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  &.this--small {
+    width: calc(24.8% - 50px);
+    @media ($tablet) {
+      width: calc(24.8% - 30px);
+    }
+    @media ($tablet3) {
+      order: 4;
+      width: calc(100% - 30px);
+    }
+    @media ($mobileMiddle) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+    label {
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      span {
+        width: 16px;
+        height: 17px;
+        margin-right: 10px;
+        background: url('../img/icons/clip.svg') center / contain no-repeat;
+      }
+    }
+  }
+
+  input[type="text"] {
+    background: transparent;
+    color: #ffffff;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 12px;
+    width: 100%;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+.detail_form__bottom {
+  margin-top: 82px;
+  @media ($tablet) {
+    margin-top: 50px;
+  }
+
+  input[type="submit"] {
+    @media ($tablet3) {
+      padding: 0 26px;
+    }
+    @media ($mobile2) {
+      width: 100%;
+    }
+  }
+}

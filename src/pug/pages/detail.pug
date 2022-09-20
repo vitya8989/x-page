@@ -1,0 +1,77 @@
+extends ../layout/default
+
+block content
+    section.detail
+        .container
+            .detail__content
+                h1.detail__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
+                .detail__breadcrumbs.breadcrumbs
+                    .breadcrumbs_wr
+                        a.breadcrumb.this--link(href='/') Главная#[span /]
+                        a.breadcrumb.this--link(href='/') Новости#[span /]
+                        .breadcrumb Медицина
+                .detail__small_container
+                    .detail__tags.tags
+                        .tags_group
+                            .tag Медицина
+                        .tags_group
+                            .tag.this--date 29/01/2021
+                    .detail__default
+                        h3 Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят в профильный режим. Приказ Министерство здравоохранения Челябинской области выпустило 27 января.
+                        br
+                        p Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19.  За это время лечение на госпитальной базе прошли свыше 1000 пациентов.
+                        div
+                            span
+                            video(src="./video/detail_video.mp4" poster="./img/detail/poster.jpg")
+                        h3 Александр Дорофеев
+                        span главный врач родильного дома г. Златоуста:
+                        br
+                        p «На сегодняшний день в МПЦ находятся 46 больных. Большая часть из них будет переведена на базу квартала Медик и меньшая часть – на базу долечивания, в район метзавода. В воскресенье к нам приезжает дезостанция для обработки всех помещений. С 1 по 7 число проводится заключительная дезинфекция всего родильного дома. С 8 числа мы начинаем принимать беременных и рожениц нашего города и горнозаводской зоны».
+                        hr
+                        p Подготовка к возвращению профильной деятельности больниц проводится тщательным образом. Это полная дезинфекция помещений, забор ряда лабораторных анализов. И только после разрешения всех инстанций медицинское учреждение поступает к работе. Златоуст — не единственный город, где в связи со стабилизацией обстановки с коронавирусной инфекцией медицинские объекты возвращаются к плановому приёму пациентов. Решение по сокращению коечных мест для больных ковидом принимается оперативным штабом по борьбе с коронавирусной инфекцией при Правительстве Челябинской области. Оставшиеся ковид-базы перейдут в прежний режим работы при условии улучшения ситуации.
+                    .detail__bottom_items
+                        .detail__bottom_item
+                            .detail__bottom_item_top Автор материала
+                            .detail__bottom_item_line
+                            .detail__bottom_item_bottom
+                                strong Иван Анатольев
+                        .detail__bottom_item
+                            .detail__bottom_item_top Теги
+                            .detail__bottom_item_line
+                            .detail__bottom_item_bottom.breadcrumbs
+                                .breadcrumbs_wr
+                                    .breadcrumb Роддом#[span /]
+                                    .breadcrumb Вакцинация#[span /]
+                                    .breadcrumb Коронавирус
+
+                        .detail__bottom_item.this--small
+                            .detail__bottom_item_top Поделиться
+                            .detail__bottom_item_line
+                            .detail__bottom_item_bottom.social
+                                .social__links
+                                    a.social__link.this--youtube(href="#")
+                                    a.social__link.this--fb(href="#")
+                                    a.social__link.this--vk(href="#")
+                                    a.social__link.this--ok(href="#")
+                                    a.social__link.this--inst(href="#")
+
+
+
+    section.detail_form
+        .container
+            .detail_form__content
+                .detail__small_container
+                    h2.detail_form__title Оставьте свой комментарий
+                    form.detail_form__form(action="#" name="detail_form")
+                        .detail_form__items
+                            .detail_form__item
+                                input(type="text" name="name" placeholder="Имя")
+                            .detail_form__item
+                                input(type="text" name="mail" placeholder="E-mail")
+                            .detail_form__item.this--small
+                                input(type="file" name="file" id="file")
+                                label(for="file") #[span] Прикрепить фото
+                            .detail_form__item.this--100
+                                input(type="text" name="comment" placeholder="Комментарий")
+                        .detail_form__bottom
+                            input.detail_form__submit.btn.this--wh(type="submit" value="Отправить")

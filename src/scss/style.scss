@@ -1,0 +1,81 @@
+@import "start/null";
+@import "start/variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.62;
+	font-family: Rubik, sans-serif;
+	font-weight: 300;
+	color: #373334;
+
+	@media ($tablet3) {
+		font-size: 1.4rem;
+	}
+
+	&.scroll-lock {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1543px;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	@media($tablet) {
+		padding: 0 15px;
+	}
+}
+.main {
+	flex: 1 0 auto;
+	background: #E5E5E5;
+	padding-top: 212px;
+	@media ($desktopBig) {
+		padding-top: 156px;
+	}
+	@media (max-width: 1300px) {
+		padding-top: 193px;
+	}
+	@media ($tablet) {
+		padding-top: 84px;
+	}
+}
+
+
+@import "blocks/header";
+@import "blocks/arrow";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/title";
+@import "blocks/breadcrumbs";
+@import "blocks/news";
+@import "blocks/datepicker";
+@import "blocks/select";
+@import "blocks/news_item";
+@import "blocks/tags";
+@import "blocks/pagination";
+@import "blocks/footer";
+@import "blocks/detail";
+@import "blocks/detail_form";
+
